@@ -15,7 +15,8 @@ const nextConfig = {
             pathname: '/processed/property_image/image/**',
           }
         ],
-      }
+      },
+    output: "standalone"
 };
 
 export default nextConfig;

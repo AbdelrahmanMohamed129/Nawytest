@@ -6,7 +6,7 @@ const port = 3001;
 
 var cors = require("cors");
 
-mongoose.connect("mongodb://127.0.0.1:27017/Nawy");
+mongoose.connect("mongodb+srv://yourtask:task123@cluster0.taf3j.mongodb.net/Nawy?retryWrites=true&w=majority");
 mongoose.connection.on("connected", () => {
   console.log("mongodb connection established successfully");
 });

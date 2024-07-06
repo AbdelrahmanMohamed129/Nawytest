@@ -8,6 +8,12 @@ const nextConfig = {
             port: '',
             pathname: '/_next/static/media/**',
           },
+          {
+            protocol: 'https',
+            hostname: 'prod-images.cooingestate.com',
+            port: '',
+            pathname: '/processed/property_image/image/**',
+          }
         ],
       }
 };

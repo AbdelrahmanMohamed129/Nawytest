@@ -3,6 +3,7 @@ import React from 'react'
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel"
 import { cn } from '@/lib/utils'
 import Autoplay from "embla-carousel-autoplay"
+import Image from 'next/image';
 
 interface carouselProps {
     images: string[]
@@ -22,10 +23,12 @@ export default function CustomCarousel(
             <CarouselContent className='w-full h-full m-auto'>
                 {images.map((image, index) => (
                     <CarouselItem key={index}>
-                            <img
-                                className="w-full object-contain m-auto"
+                            <Image
+                                className="w-full h-full object-cover m-auto"
                                 src={image}
                                 alt=""
+                                width={1920}
+                                height={1080}
                             />
                     </CarouselItem>
                 ))}

@@ -1,10 +1,10 @@
-import Image, { StaticImageData } from 'next/image'
+import Image from 'next/image'
 import React from 'react'
 import Link from 'next/link'
-import { Apartment } from '@/data/apartments'
+import { apartment } from '@/types'
 
 interface ApartmentsProps {
-    apartments: Apartment[]
+    apartments: apartment[]
 }
 export default function Apartments({ apartments }: ApartmentsProps) {
     return (
@@ -13,17 +13,17 @@ export default function Apartments({ apartments }: ApartmentsProps) {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                 {apartments.map((apartment, index) => (
                     <div key={index} className="flex flex-col items-center gap-4 p-4">
-                        <Link underlayColor="rgba(30, 65, 100, 0.2)" className="flex flex-col items-center gap-4 w-full"
-                            href={`/apartment/${apartment.title.toLowerCase().replace(" ", "-")}`}>
+                        <Link className="flex flex-col items-center gap-4 w-full"
+                            href={`/apartment/${apartment._id}`}>
                             <Image className="rounded-[2rem] p-4"
-                                src={apartment.image}
+                                src={apartment.images[0]}
                                 alt="apartment image"
                                 width={1000}
                                 height={1000}
                             />
-                            <h3 className="text-2xl font-bold text-primary">{apartment.title}</h3>
+                            <h3 className="text-2xl font-bold text-primary">{apartment.name}</h3>
                         </Link>
-                        <p className="text-center w-2/3 lg:w-full">{apartment.description}</p>
+                        <p className="text-center w-2/3 lg:w-full">{apartment.location}</p>
                     </div>
                 ))}
             </div>

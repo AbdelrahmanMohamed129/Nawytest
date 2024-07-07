@@ -4,6 +4,7 @@ import Apartments from "@/components/apartments";
 import { images } from "@/data/home";
 import { useEffect, useState } from "react";
 import { apartment } from "@/types";
+import { apartmentsDummy } from "@/data/apartments";
 
 export default function Home() {
   const [apartments, setApartments] = useState<apartment[]>([]);
@@ -11,15 +12,15 @@ export default function Home() {
   useEffect(() => {
     fetch("http://localhost:3001/apartments")
       .then((res) => res.json())
-      .then((data) => {setApartments(data); console.log(data);})
-      .catch((err) => console.log(err));
+      .then((data) => { setApartments(data); console.log(data); })
+      .catch((err) => setApartments(apartmentsDummy));
   }, [])
 
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between">
-      <Hero images={images}/>
-      <Apartments apartments={apartments}/>
+      <Hero images={images} />
+      <Apartments apartments={apartments} />
     </main>
   );
 }

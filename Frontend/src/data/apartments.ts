@@ -1,38 +1,155 @@
-export interface Apartment {
-    title: string
-    description: string
-    image: string
-}
+import { apartment } from "@/types";
 
-export const apartments: Apartment[] = [
+export const apartmentsDummy: apartment[] = [
     {
-        title: "Dental Surgery",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed etiam, purus euismod.",
-        image: "https://www.nawy.com/_next/static/media/landing-background.edcd0e3d.webp"
+        _id: "6688628bc6b0ad80f608bb0d",
+        name: "Zed apartment",
+        size: 1600000,
+        price: 50000000,
+        location: "Zed Park, 6 October",
+        bedrooms: 6,
+        bathrooms: 3,
+        images: ["https://prod-images.cooingestate.com/processed/property_image/image/270070/high.webp"]
     },
     {
-        title: "Dental Implants",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed etiam, purus euismod.",
-        image: "https://www.nawy.com/_next/static/media/landing-background.edcd0e3d.webp"
+        _id: "6688628bc6b0ad80f608bb0d",
+        name: "Zed apartment",
+        size: 1600000,
+        price: 50000000,
+        location: "Zed Park, 6 October",
+        bedrooms: 6,
+        bathrooms: 3,
+        images: ["https://prod-images.cooingestate.com/processed/property_image/image/270070/high.webp"]
     },
     {
-        title: "Dental Crowns",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed etiam, purus euismod.",
-        image: "https://www.nawy.com/_next/static/media/landing-background.edcd0e3d.webp"
+        _id: "6688628bc6b0ad80f608bb0d",
+        name: "Zed apartment",
+        size: 1600000,
+        price: 50000000,
+        location: "Zed Park, 6 October",
+        bedrooms: 6,
+        bathrooms: 3,
+        images: ["https://prod-images.cooingestate.com/processed/property_image/image/270070/high.webp"]
     },
     {
-        title: "Endodontics",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed etiam, purus euismod.",
-        image: "https://www.nawy.com/_next/static/media/landing-background.edcd0e3d.webp"
+        _id: "6688628bc6b0ad80f608bb0d",
+        name: "Zed apartment",
+        size: 1600000,
+        price: 50000000,
+        location: "Zed Park, 6 October",
+        bedrooms: 6,
+        bathrooms: 3,
+        images: ["https://prod-images.cooingestate.com/processed/property_image/image/270070/high.webp"]
     },
     {
-        title: "Pedodontics",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed etiam, purus euismod.",
-        image: "https://www.nawy.com/_next/static/media/landing-background.edcd0e3d.webp"
+        _id: "6688628bc6b0ad80f608bb0d",
+        name: "Zed apartment",
+        size: 1600000,
+        price: 50000000,
+        location: "Zed Park, 6 October",
+        bedrooms: 6,
+        bathrooms: 3,
+        images: ["https://prod-images.cooingestate.com/processed/property_image/image/270070/high.webp"]
     },
     {
-        title: "Periodontics",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed etiam, purus euismod.",
-        image: "https://www.nawy.com/_next/static/media/landing-background.edcd0e3d.webp"
+        _id: "6688628bc6b0ad80f608bb0d",
+        name: "Zed apartment",
+        size: 1600000,
+        price: 50000000,
+        location: "Zed Park, 6 October",
+        bedrooms: 6,
+        bathrooms: 3,
+        images: ["https://prod-images.cooingestate.com/processed/property_image/image/270070/high.webp"]
     },
+    {
+        _id: "6688628bc6b0ad80f608bb0d",
+        name: "Zed apartment",
+        size: 1600000,
+        price: 50000000,
+        location: "Zed Park, 6 October",
+        bedrooms: 6,
+        bathrooms: 3,
+        images: ["https://prod-images.cooingestate.com/processed/property_image/image/270070/high.webp"]
+    },
+    {
+        _id: "6688628bc6b0ad80f608bb0d",
+        name: "Zed apartment",
+        size: 1600000,
+        price: 50000000,
+        location: "Zed Park, 6 October",
+        bedrooms: 6,
+        bathrooms: 3,
+        images: ["https://prod-images.cooingestate.com/processed/property_image/image/270070/high.webp"]
+    },
+    {
+        _id: "6688628bc6b0ad80f608bb0d",
+        name: "Zed apartment",
+        size: 1600000,
+        price: 50000000,
+        location: "Zed Park, 6 October",
+        bedrooms: 6,
+        bathrooms: 3,
+        images: ["https://prod-images.cooingestate.com/processed/property_image/image/270070/high.webp"]
+    },
+    {
+        _id: "6688628bc6b0ad80f608bb0d",
+        name: "Zed apartment",
+        size: 1600000,
+        price: 50000000,
+        location: "Zed Park, 6 October",
+        bedrooms: 6,
+        bathrooms: 3,
+        images: ["https://prod-images.cooingestate.com/processed/property_image/image/270070/high.webp"]
+    },
+    {
+        _id: "6688628bc6b0ad80f608bb0d",
+        name: "Zed apartment",
+        size: 1600000,
+        price: 50000000,
+        location: "Zed Park, 6 October",
+        bedrooms: 6,
+        bathrooms: 3,
+        images: ["https://prod-images.cooingestate.com/processed/property_image/image/270070/high.webp"]
+    },
+    {
+        _id: "6688628bc6b0ad80f608bb0d",
+        name: "Zed apartment",
+        size: 1600000,
+        price: 50000000,
+        location: "Zed Park, 6 October",
+        bedrooms: 6,
+        bathrooms: 3,
+        images: ["https://prod-images.cooingestate.com/processed/property_image/image/270070/high.webp"]
+    },
+    {
+        _id: "6688628bc6b0ad80f608bb0d",
+        name: "Zed apartment",
+        size: 1600000,
+        price: 50000000,
+        location: "Zed Park, 6 October",
+        bedrooms: 6,
+        bathrooms: 3,
+        images: ["https://prod-images.cooingestate.com/processed/property_image/image/270070/high.webp"]
+    },
+    {
+        _id: "6688628bc6b0ad80f608bb0d",
+        name: "Zed apartment",
+        size: 1600000,
+        price: 50000000,
+        location: "Zed Park, 6 October",
+        bedrooms: 6,
+        bathrooms: 3,
+        images: ["https://prod-images.cooingestate.com/processed/property_image/image/270070/high.webp"]
+    },
+    {
+        _id: "6688628bc6b0ad80f608bb0d",
+        name: "Zed apartment",
+        size: 1600000,
+        price: 50000000,
+        location: "Zed Park, 6 October",
+        bedrooms: 6,
+        bathrooms: 3,
+        images: ["https://prod-images.cooingestate.com/processed/property_image/image/270070/high.webp"]
+    },
+
 ]

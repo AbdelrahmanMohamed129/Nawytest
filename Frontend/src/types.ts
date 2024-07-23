@@ -8,3 +8,13 @@ export interface apartment {
     bedrooms: number;
     bathrooms: number;
 }
+
+export interface apartmentsReq{
+    
+    total : number,
+    page : number,
+    limit : number,
+    totalPages: number,
+    data: apartment[]
+      
+}

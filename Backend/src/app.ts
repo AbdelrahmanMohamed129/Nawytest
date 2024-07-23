@@ -3,10 +3,12 @@ const mongoose = require("mongoose");
 const Apartments = require("./model");
 const app = express();
 const port = 3001;
+require("dotenv").config();
+
 
 var cors = require("cors");
 
-mongoose.connect("mongodb+srv://yourtask:task123@cluster0.taf3j.mongodb.net/Nawy?retryWrites=true&w=majority");
+mongoose.connect(process.env.MONGO_URL);
 mongoose.connection.on("connected", () => {
   console.log("mongodb connection established successfully");
 });
@@ -18,9 +20,28 @@ app.use(express.json());
 
 app.use(cors());
 
+// app.get("/apartments", async (req, res) => {
+//   const apartments = await Apartments.find({});
+//   res.json(apartments);
+// });
+
 app.get("/apartments", async (req, res) => {
-  const apartments = await Apartments.find({});
-  res.json(apartments);
+  const page = parseInt(req.query.page as string) || 1;
+  const limit = parseInt(req.query.limit as string) || 10;
+  const skip = (page - 1) * limit;
+  try {
+    const apartments = await Apartments.find({}).skip(skip).limit(limit);
+    const total = await Apartments.countDocuments({});
+    res.json({
+      total,
+      page,
+      limit,
+      totalPages: Math.ceil(total / limit),
+      data: apartments
+    });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
 });
 app.get("/apartments/:id", async (req, res) => {
   console.log(req.params.id)

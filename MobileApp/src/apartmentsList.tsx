@@ -19,7 +19,7 @@ function ApartmentsList(): React.JSX.Element {
   useEffect(() => {
     fetch('http://localhost:3001/apartments')
       .then((response) => response.json())
-      .then((apts) => setApartments(apts))
+      .then((apts) => setApartments(apts.data))
       .catch(() => setApartments(apartmentsDummy));
   }, []);
   return (

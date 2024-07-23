@@ -3,7 +3,7 @@ import Hero from "@/components/hero";
 import Apartments from "@/components/apartments";
 import { images } from "@/data/home";
 import { useEffect, useState } from "react";
-import { apartment } from "@/types";
+import { apartment, apartmentsReq } from "@/types";
 import { apartmentsDummy } from "@/data/apartments";
 
 export default function Home() {
@@ -12,7 +12,7 @@ export default function Home() {
   useEffect(() => {
     fetch("http://localhost:3001/apartments")
       .then((res) => res.json())
-      .then((data) => { setApartments(data); console.log(data); })
+      .then((res) => { setApartments(res.data); console.log(res); })
       .catch((err) => setApartments(apartmentsDummy));
   }, [])
 
